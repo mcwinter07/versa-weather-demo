@@ -33,6 +33,10 @@ section,
 summary {
   display: block;
 }
+
+main {
+  padding-top: 30px;
+}
 audio,
 canvas,
 progress,
@@ -242,7 +246,7 @@ textarea {
   font: inherit;
 }
 * {
-  box-sizing: inherit;
+  box-sizing: border-box !important;
 }
 *:before {
   box-sizing: inherit;
@@ -346,7 +350,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -358,7 +362,7 @@ ul {
   list-style-image: none;
 }
 ol {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -427,7 +431,7 @@ table {
   width: 100%;
 }
 blockquote {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 1.45rem;
   margin-top: 0;
   padding-bottom: 0;
@@ -498,12 +502,12 @@ ul li {
   padding-left: 0;
 }
 li > ol {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
 li > ul {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
@@ -595,3 +599,16 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+@keyframes wobble { 
+  0% { transform: skewX(-9deg); } 
+  10% { transform: skewX(8deg); } 
+  20% { transform: skewX(-7deg); } 
+  30% { transform: skewX(6deg); } 
+  40% { transform: skewX(-5deg); } 
+  50% { transform: skewX(4deg); } 
+  60% { transform: skewX(-3deg); } 
+  70% { transform: skewX(2deg); } 
+  80% { transform: skewX(-1deg); } 
+  90% { transform: skewX(0deg); } 
+} 

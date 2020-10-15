@@ -1,0 +1,50 @@
+.forecast_active {
+  display: inline-flex;
+  max-width: calc(100%/5);
+  flex-grow: 1;
+  width: 100%;
+  overflow: hidden;
+  transition: all cubic-bezier(0.39, 0.575, 0.565, 1) .3s;
+}
+
+.forecast_active:hover {
+  transform: translate(-2.5px, -3.5px);
+  cursor: pointer;
+}
+
+.forecast_jetison {
+  transform: translate(-200vh, -200vw);
+  width: 200%;
+}
+
+.forecast_wrapper_active {
+  border-radius: 5px;
+  display: inline-flex;
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  background-color: lightblue;
+}
+
+.forecast_active ul {
+  display: flex;
+  list-style: none;
+}
+
+.forecast_active li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.forecast_active img {
+  width: 75%;
+  max-width: 100%;
+  height: auto;
+}
+
+.forecast_active p {
+  font-size: 12px;
+  font-weight: bold;
+}

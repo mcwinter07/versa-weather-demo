@@ -1,22 +1,49 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { useState } from "react"
+import ForecastList from '../components/forecast-list'
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import "../components/app.css"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const [cssActive, setCssActive] = useState(false)
+  return <Layout cssActive={cssActive}>
+      <SEO title="Home" />
+      <h1>Welcome to our wonderful website!</h1>
+      <p>Oh wait, this doesn't look like a website... somethings not quite right...</p>
+      <p>I wander what happens if you pressed that button?</p>
+      <button style={{marginBottom:'20px'}}onClick={() => setCssActive(!cssActive)}>Press me</button>
+      <ForecastList
+        cssEnabled={cssActive}
+        city="Melbourne"
+        countryCode="AU"
+      />
+      <ForecastList
+        cssEnabled={cssActive}
+        city="Sydney"
+        countryCode="AU"
+      />
+      <ForecastList
+        cssEnabled={cssActive}
+        city="Auckland"
+        countryCode="NZ"
+      />
+      <ForecastList
+        cssEnabled={cssActive}
+        city="Nicaragua"
+        countryCode="NI"
+      />
+      <ForecastList
+        cssEnabled={cssActive}
+        city="Utah"
+        countryCode="US"
+      />
+      <ForecastList
+        cssEnabled={cssActive}
+        city="Seattle"
+        countryCode="US"
+      />
+    </Layout>
+}
 
 export default IndexPage
